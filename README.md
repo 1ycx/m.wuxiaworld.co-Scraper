@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" > <img src="https://img.shields.io/badge/Status-Working-blue.svg" >
+<img src="https://img.shields.io/badge/Status-Working-blue.svg" >
 
 # About: 
 <b>Python Script To Copy [m.wuxiaworld.co](http://m.wuxiaworld.co) Chapters Into EPUB File.</b>
