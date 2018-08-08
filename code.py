@@ -134,7 +134,7 @@ for a in about.select("a"):
     a.decompose()
 html_gen("hr", '', about)
 html_gen("h3", "Description", about)
-html_gen("p", synopsis.contents[0], about)
+html_gen("p", synopsis.text, about) # Some strip to be done here for proper description
 html_gen("hr", '', about)
 html_gen("h3", "About This Download : ", about)
 html_gen("p", "Total Chapters = " + str(counter), about)
