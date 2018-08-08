@@ -19,7 +19,7 @@ Just Enter The Novel URL And You're Done!
 1. For Beginners, After Setting Up A Working Python 3 Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
    * `pip3 install bs4`
    * `pip3 install ebooklib`
-   * `pip3 install cfscrape`
+   * `pip3 install requests`
    * `pip3 install html5lib=="0.9999999"` 
 
 2. Download The Python Script And Unzip It.
