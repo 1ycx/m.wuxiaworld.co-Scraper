@@ -8,8 +8,8 @@ book = epub.EpubBook()
 book.set_language('en')
 
 # Enter The Novel URL Here
-novelURL =  'http://m.wuxiaworld.co/Super-Gene/'
-novelURLChap = novelURL + 'all.html'
+novelURL =  'http://m.wuxiaworld.co/The-Strongest-System/'
+novelChapURL = novelURL + 'all.html'
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
@@ -20,7 +20,7 @@ page = req.get(novelURL)
 soup = bs(page.text, "html5lib")
 
 # Get & Passing To Beautiful Soup Novel Chapters Page
-pageChap = req.get(novelURLChap)
+pageChap = req.get(novelChapURL)
 so = bs(pageChap.text, "html5lib")
 
 # Seperating Parts From Soup
@@ -40,13 +40,13 @@ links = []
 for a in chapLi.findAll('a'):
     link = novelURL + a.get('href')
     links.append(link)
-del links[0], links[1], links[2]
-
+del links[0]; del links[0]; del links[0]; # Remove the starting 3 links with href="#bottom"
 
 # Chapter Links
 length = len(links)
 start = 0
 end = length
+print("Name = ", title)
 print("\r\nTotal No. Of Chapters = " + str(length))
 print("\r\nPlease Note That No. Of Chapters Shown May Not Match The Actual Numbering")
 print("Because Some Chapters Maybe Numbered As 187-A, 187-B, 187-C Although Being")
@@ -75,26 +75,26 @@ def html_gen(elem, val, tag, insert_loc=None):
 
 counter = 0
 err = []
-
+i = 0
 for i in range(start, end+1):
     
     try:
     
         if i == length:
             break
-
+        
         #####################
-        # Sets the adress here 
+        # Dowload page
         pageIndividual = req.get(links[i])
 
-        # Modifies the HTML received
+        # Pass to BS4
         s = bs(pageIndividual.content, "html5lib")    
+        
         #chapterTitle = "Chapter : " + str(i)
-        
-        
         div = s.select_one("#chaptercontent")
         chapterTitle = div.contents[0]
 
+        # Remove anchor tags
         for a in div.select("a"):
             a.decompose()
 
@@ -129,20 +129,21 @@ for i in range(start, end+1):
         err.append(i)
 
 # About Novel
-about.find('img').decompose()
-for a in about.select("a"):
+about.find('img').decompose() # Remove IMG tags
+for a in about.select("a"):   # Remove anchor tags
     a.decompose()
 html_gen("hr", '', about)
 html_gen("h3", "Description", about)
-html_gen("p", synopsis.text, about) # Some strip to be done here for proper description
+syn = synopsis.text.replace("Description","")
+html_gen("p", syn, about)
 html_gen("hr", '', about)
 html_gen("h3", "About This Download : ", about)
 html_gen("p", "Total Chapters = " + str(counter), about)
 html_gen("p", "No. Of Chapters That Raised Exceptions = " + str(len(err)), about)
 if len(err) != 0:
     html_gen("p", "And They Are : ", about)
-    for e in err:
-        html_gen("li", str(e), about)
+    for i in err:
+        html_gen("li", str(i), about)
 html_gen("hr", '', about)
 
 
@@ -171,14 +172,14 @@ book.add_item(nav_css)
 # Default Location Will Be The Place Where This Script Is Located
 # To Change, 
 # 1 - Add The Location Inside The Empty pathToLocation
-#   Example 1.1 - Windows : 
+#   Example 1 - Windows : 
 #       pathToLocation = 'C:\\Users\\Adam\\Documents\\'
 #       Notice The Extra \ To Be Added Along With Every Original - This Is Compulsory For Every \
-#   Example 1.2 - Linux : 
+#   Example 2 - Unix/POSIX Based(OS X, Linux, Free BSD etc) : 
 #       pathToLocation = '/home/Adam/Documents/'   
 #       Notice That No Extra / Are Added Along With Original  
 # OR 
-# 2 - Move This Script And To, And Run From The Location To Be Saved
+# 2 - Move This Script To, And Run From The Location To Be Saved
 pathToLocation = ''
 saveLocation = pathToLocation + title + '_' + str(start) + '_' + str(i) + '.epub'
 
@@ -189,7 +190,7 @@ epub.write_epub(saveLocation, book, {})
 
 # Location File Got Saved
 if pathToLocation == '':
-    print("Saved at " + str(os.getcwd()) + ' as "' + title + '_' + str(start) + '_' + str(i) + '.epub"')
+    print("Saved at " + str(os.getcwd()) + ' as "' + title + '_' + str(start) + '_' + str(i) + '.epub"') # Example : Saved at /home/Adam/Documents/ as "The Strongest System_0_3.epub"
 else :
     print("Saved at " + saveLocation)
 
