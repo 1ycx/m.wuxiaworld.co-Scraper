@@ -7,7 +7,7 @@ Ask Me, What The Heck Is This ? Well, It's A Website With Novels From Webnovel(Q
 
 **No Spirit Stones, No Patreon, No Subscription Or Any Of Those Things Required To Read The Latest Chapters!**
 
-Just Enter The Novel URL And You're Done!
+How does it work ? Just Enter The Novel URL Inside The Script And You're Done!
 
 <h4>I'll Try To Add Any Necessary Updates.</h4>
 
@@ -40,7 +40,8 @@ Just Enter The Novel URL And You're Done!
 
 ### Working :
 * Set Novel Link in `novelURL`
-* If Specific No. Of Chapters Are To Be Downloaded, Then Enter `2` And Provide The `start` And `end` Chapters.
+  * Example : http://m.wuxiaworld.co/Martial-God-Space/ **|** http://m.wuxiaworld.co/Tales-of-Demons-and-Gods/
+* If Specific Sequence Of Chapters Are To Be Downloaded, Then Enter `2` And Provide The `start` And `end` Chapters.
 * EPUB File Will Be Saved In The Format `NovelName_start-chapter_end-chapter.epub`
 
 ### Parsing :
