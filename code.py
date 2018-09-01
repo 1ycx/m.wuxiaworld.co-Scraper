@@ -39,7 +39,9 @@ for a in chapLi.findAll('a'):
     links.append(link)
     chapTitles.append(a.string)
 # Remove the starting 3 links with href="#bottom" from list
+# Remove the starting 3 titles
 del links[2], links[1], links[0], chapTitles[2], chapTitles[1], chapTitles[0]
+
 
 # Chapter Links
 length = len(links)
@@ -92,6 +94,8 @@ for i in range(start, end+1):
 
         #chapterTitle = "Chapter : " + str(i)
         chapterTitle = chapTitles[i]
+
+        # Create new tag, Add chapter title and content
         tag = s.new_tag("div")
         html_gen("h3", s, chapterTitle, tag)
         html_gen("hr", s, "", tag)
@@ -102,8 +106,6 @@ for i in range(start, end+1):
 
         # Append to tag
         tag.append(div)
-        print(tag)
-
 
         # Creates a chapter
         c2 = epub.EpubHtml(title=chapterTitle, file_name='chap_'+str(i)+'.xhtml', lang='hr')
