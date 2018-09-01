@@ -40,7 +40,6 @@ for a in chapLi.findAll('a'):
     chapTitles.append(a.string)
 # Remove the starting 3 links with href="#bottom" from list
 del links[2], links[1], links[0], chapTitles[2], chapTitles[1], chapTitles[0]
-print(chapTitles)
 
 # Chapter Links
 length = len(links)
