@@ -3,11 +3,12 @@
 # About: 
 <b>Python Script To Copy [m.wuxiaworld.co](http://m.wuxiaworld.co) Chapters Into EPUB File.</b>
 
-Ask Me, What The Heck Is This ? Well, It's A Website With Novels From Webnovel(Qidan) & WuxiaWorld With All Latest Chapters Unlocked. 
+Ask Me, Why This Website? Well, It Has Novels From **Webnovel(Qidan) & WuxiaWorld** With All Latest Chapters <b><u>Unlocked</u></b>. 
 
 **No Spirit Stones, No Patreon, No Subscription Or Any Of Those Things Required To Read The Latest Chapters!**
+Don't Take My Word For It ? Check It Out.
 
-How does it work ? Just Enter The Novel URL Inside The Script And You're Done!
+How Does The Script Work ? Just Enter The Novel URL Inside The Script And You're Done!
 
 <h4>I'll Try To Add Any Necessary Updates.</h4>
 
