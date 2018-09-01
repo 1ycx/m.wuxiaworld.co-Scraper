@@ -3,6 +3,10 @@
 # About: 
 <b>Python Script To Copy [m.wuxiaworld.co](http://m.wuxiaworld.co) Chapters Into EPUB File.</b>
 
+Ask Me, What The Heck Is This ? Well, It's A Website With Novels From Webnovel(Qidan) & WuxiaWorld With All Latest Chapters Unlocked. 
+
+**No Spirit Stones, No Patreon, No Subscription Or Any Of Those Things Required To Read The Latest Chapters!**
+
 Just Enter The Novel URL And You're Done!
 
 <h4>I'll Try To Add Any Necessary Updates.</h4>
@@ -29,14 +33,15 @@ Just Enter The Novel URL And You're Done!
 4. In Case The Script Was Not Updated According To The Changes In Website, You Might Refer The [**BeautifulSoup Docs**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) To Make Changes Accordingly.
 
 4. To Run, Open CMD/Terminal, Navigate To The Unzip Location And Type :
-  `python3 code.py` or `python code.py`
+   * Linux - `python3 code.py` 
+   * Windows - `python code.py` or `py code.py`
 
 5. EPUB File Will Be Saved At The Location Of Script.
 
 ### Working :
 * Set Novel Link in `novelURL`
-* If Specific No. Of Chapters Are To Be Downloaded, Then Enter 2 And Provide The `start` And `end` Chapters.
-* All Chapters Of Corresponding Novel Will Be Downloaded And Saved As `novel-name_start-chapter_end-chapter.epub`
+* If Specific No. Of Chapters Are To Be Downloaded, Then Enter `2` And Provide The `start` And `end` Chapters.
+* EPUB File Will Be Saved In The Format `NovelName_start-chapter_end-chapter.epub`
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**Differences Between Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers).
