@@ -16,9 +16,9 @@ How Does The Script Work ? Just Enter The Novel URL Inside The Script And You're
 
 ## Problem(s) :
 * None Yet(Report if any).
-   
-<br/>
 
+## Screenshot :
+![Image Not Available](Screenshot.png "Sample Working")
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
