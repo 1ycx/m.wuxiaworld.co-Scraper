@@ -17,16 +17,50 @@ How Does The Script Work ? Just Enter The Novel URL Inside The Script And You're
 ## Problem(s) :
 * None Yet(Report if any).
 
-## Screenshot :
-![Image Not Available](Screenshot.png "Sample Working")
+## Sample :
+```bash
+kogam22@home:~/code$ python3 code.py
+
+Novel URL Set
+
+Name :  The Magus Era
+
+Total No. Of Chapters =  1792
+
+---------------------------------------------------
+Enter 1 - To Download All Chapters
+Enter 2 - To Download A Part, Like 1-100 Or 400-650
+Enter 3 - To View Chapter Titles Before Download
+
+Enter Your Choice : 2
+---------------------------------------------------
+
+===================================================
+**Note : "First Chapter" Starts From "1"
+         "Last Chapter" Ends At "1792"
+
+Enter First Chapter : 1
+Enter Last Chapter  : 10
+===================================================
+Parsed Chapter : Prologue
+Parsed Chapter : Chapter 1 - Hunter
+Parsed Chapter : Chapter 2 - Malice
+Parsed Chapter : Chapter 3 - Challenge
+Parsed Chapter : Chapter 4 - Deal
+Parsed Chapter : Chapter 5 - Gain
+Parsed Chapter : Chapter 6 - Parents
+Parsed Chapter : Chapter 7 - Defiance
+Parsed Chapter : Chapter 8 - Different Races
+Parsed Chapter : Chapter 9 - Calculation
+Created "About Novel" Page
+Saving . . .
+Saved at /home/kogam22/code as "The Magus Era_0_9.epub"
+kogam22@home:~/code$
+```
 
 ## Documentation :
-1. For Beginners, After Setting Up A Working Python 3 Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
-   * `pip3 install bs4`
-   * `pip3 install ebooklib`
-   * `pip3 install requests`
-   * `pip3 install html5lib=="0.9999999"` 
-
+1. For Beginners, After Setting Up A Working Python(>=3.6) Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run This Command In Your CMD/Terminal :
+   * `pip install -r requirements.txt`
 2. Download The Python Script And Unzip It.
 
 3. Open The Script With A Text Editor And Read The Details Inside.
