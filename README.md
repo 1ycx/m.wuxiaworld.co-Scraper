@@ -59,11 +59,13 @@ kogam22@home:~/code$
 ```
 
 ## Documentation :
-1. For Beginners, After Setting Up A Working Python(>=3.6) Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run This Command In Your CMD/Terminal :
-   * `pip install -r requirements.txt` **OR** `pip3 install -r requirements.txt`
-2. Download The Python Script And Unzip It.
+1. Download The Python Script And Unzip It. 
 
-3. Open The Script With A Text Editor And Read The Details Inside.
+2. For Beginners, After Setting Up A Working Python(>=3.6) Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Open CMD/Terminal & Navigate To The Folder Where You Unzipped This Script & Run This Command :
+   * `pip install -r requirements.txt` **OR** `pip3 install -r requirements.txt`
+ 
+
+3. **Optional :** Open The Script With A Text Editor And Read The Details Inside(To Understand What Actually Happens).
 
 4. In Case The Script Was Not Updated According To The Changes In Website, You Might Refer The [**BeautifulSoup Docs**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) To Make Changes Accordingly.
 
