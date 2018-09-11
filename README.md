@@ -60,7 +60,7 @@ kogam22@home:~/code$
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python(>=3.6) Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run This Command In Your CMD/Terminal :
-   * `pip install -r requirements.txt`
+   * `pip install -r requirements.txt` **OR** `pip3 install -r requirements.txt`
 2. Download The Python Script And Unzip It.
 
 3. Open The Script With A Text Editor And Read The Details Inside.
