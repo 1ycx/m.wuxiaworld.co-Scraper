@@ -1,10 +1,12 @@
+import sys, os
+import random as ra
 import requests as req
 import asyncio
-import sys, os
 from aiostream import stream, pipe
+from aiohttp import ClientSession
 from ebooklib import epub
 from bs4 import BeautifulSoup as bs
-from aiohttp import ClientSession
+
 
 err, urls_titles, min_urls_titles = [], [], []
 length, counter, start, end = 0, 0, 0, 0
@@ -111,6 +113,11 @@ def process(response, title):
 
         # Append to tag
         chapter.append(div)
+
+        # Check if name exists
+        if book.get_item_with_href(title + '.xhtml'):
+            title += str(ra.randint(1,5))
+
         # Creates a chapter
         c2 = epub.EpubHtml(title=chapterTitle, file_name=title+'.xhtml', lang='hr')
         c2.content = chapter.encode("utf-8")
@@ -231,7 +238,7 @@ if __name__=="__main__":
     book.set_language('en')
 
     # Enter The Novel URL Here
-    novelURL =  'http://m.wuxiaworld.co/The-Magus-Era/'
+    novelURL =  'http://m.wuxiaworld.co/King-of-Gods/'
     novelChapURL = novelURL + 'all.html'
     while novelURL == '':
         print("Novel URL Not Provided Inside The Script.")
@@ -256,4 +263,3 @@ if __name__=="__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
     loop.close()
-    
