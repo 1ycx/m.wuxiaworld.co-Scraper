@@ -1,0 +1,6 @@
+aiostream
+aiohttp
+ebooklib
+requests
+bs4
+html5lib~=0.999999
