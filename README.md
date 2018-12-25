@@ -1,4 +1,7 @@
-<img src="https://img.shields.io/badge/Status-Working-blue.svg" >
+<img src="https://img.shields.io/badge/Status-Not Confirmed-blue.svg" >
+
+# **Note :** 
+Because I don't know which version I used during development andthe latest version of downloaded modules, you may find un expected problems. In the meanwhile, try using my other scraper for Official WuxiaWorld.
 
 # About: 
 <b>Python Script To Copy [m.wuxiaworld.co](http://m.wuxiaworld.co) Chapters Into EPUB File.</b>
