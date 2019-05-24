@@ -1,6 +1,9 @@
 <img src="https://img.shields.io/badge/Status-Not Confirmed-blue.svg" >
 
-# **Note :** 
+# **Note :**
+This project will be dropped because wuxiaworld.co has released their Android app. Thus there is no meaning to this project.
+
+# **Note 1:** 
 Because I don't know which version I used during development andthe latest version of downloaded modules, you may find un expected problems. In the meanwhile, try using my other scraper for Official WuxiaWorld.
 
 # About: 
